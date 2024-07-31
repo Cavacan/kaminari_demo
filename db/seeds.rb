@@ -8,16 +8,11 @@
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
 require 'faker'
-Faker::Config.locale = 'fr'
 
 20.times do 
-  fruites_name = Faker::Food.fruites
-  while Product.exists?(name: fruites_name)
-    fruites_name = Faker::Food.fuites
-  end
   price = rand(5..100)*10
-  produce.create!(
-    name: fruites_name,
+  Product.create!(
+    name: Faker::Food.fruits,
     price: price
   )
 end
