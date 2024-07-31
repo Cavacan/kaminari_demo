@@ -1,0 +1,28 @@
+<H1>Products!</H1>
+  <%= link_to "new product", new_product_path %>
+  <br>
+<% if @products.present? %>
+  <table>
+    <h3>product list</h3>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>name</th>
+          <th>price</th>
+        </tr>
+      </thead>
+    <tbody>
+      <% @products.each do |product| %>
+        <tr>
+          <td><%= product.id %></td>
+          <td><%= product.name %></td>
+          <td><%= product.price %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <br>
+  <div>kaminari_demo</div>
+<% else %>
+  <p>~~None product~~</p>
+<% end %>
