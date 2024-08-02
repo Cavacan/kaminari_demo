@@ -48,6 +48,8 @@ gem 'kaminari'
 
 gem 'bootstrap', '~> 5.3.0'
 
+gem 'bootstrap5-kaminari-views', '~> 0.0.1'
+
 gem 'jquery-rails'
 
 gem 'sass-rails', '~> 6.0'
