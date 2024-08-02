@@ -46,6 +46,10 @@ gem "bootsnap", require: false
 
 gem 'kaminari'
 
+gem 'bootstrap', '~> 5.3.0'
+
+gem 'jquery-rails'
+
 gem 'sass-rails', '~> 6.0'
 
 gem 'sassc-rails', '~> 2.1'

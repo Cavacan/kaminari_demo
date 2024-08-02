@@ -1,4 +1,32 @@
-<%= search_form_for q, url: url do |f| %>
-  <%= f.search_field :name_cont, class: 'form-control', placeholder: '商品名' %>
-  <%= f.submit '検索', class: 'btn btn-primary' %>
-<% end %>
+<div class="row">
+  <%= search_form_for q, url: url do |f| %>
+    <div class="col-6">
+        <div class="row">
+          <div class="col">
+          <%= f.label :name_cont, '商品名' %>
+          <%= f.search_field :name_cont, class: 'form-control', placeholder: '商品名' %>
+        </div>
+      </div>
+    </div>
+    <div class="col-6">
+      <div class="row">
+        <div class="col">
+          <%= f.label :price_cont, '価格'%>
+          <%= f.search_field :price_gteq, class: 'form-control', placeholder: '以上' %>
+        </div>
+        <div class="col-1">
+          <%= f.label ''%>
+          <p> ～ </p>
+          </div>
+        <div class="col">
+          <%= f.label ''%>
+          <%= f.search_field :price_lt, class: 'form-control', placeholder: '未満' %>
+        </div>        
+      </div>
+    </div>
+
+    <div class="col-2 mt-12">
+      <%= f.submit '検索', class: 'btn btn-primary' %>
+    </div>
+  <% end %>
+</div>
