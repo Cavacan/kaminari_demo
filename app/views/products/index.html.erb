@@ -1,25 +1,40 @@
-<h1>Products!</h1>
-  <%= link_to "new product", new_product_path %>
-  <br>
-  <%= render 'search', q:@q, url: products_path %>
-  <br>
-<% if @products.present? %>
-  <h3>product list</h3>
-  <table>
-    <thead>
-      <tr>
-        <th>ID</th>
-        <th>Name</th>
-        <th>Price</th>
-      </tr>
-    </thead>
-    <tbody>
-      <%= render partial: 'product', collection: @products %>
-    </tbody>
-  </table>
-  <%= paginate @products %>
-<% else %>
-  <p>~~None product~~</p>
-<% end %>
-<br>
-<div>kaminari_demo</div>
+<div class="container">
+  <div class="row m-20 mb-2">
+    <div class="justify-content-center">
+      <h1>Products!</h1>
+    </div>    
+  </div>
+  <div class="row m-20 mb-2">
+    <%= link_to "new product", new_product_path %>
+  </div>
+  <div class="row m-20 mb-2">
+    <%= render 'search', q:@q, url: products_path %>
+  </div>
+  <div class="row m-20 mb-2">
+    <% if @products.present? %>
+      <h3>Product List</h3>
+      <div class="table-responsive">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Price</th>
+            </tr>
+          </thead>
+          <tbody>
+            <%= render partial: 'product', collection: @products %>
+          </tbody>
+        </table>
+      </div>
+      <div class="mt-2 d-flex justify-content-center">
+        <%= paginate @products, theme: 'bootstrap-5' %>
+      </div>
+    <% else %>
+      <p>~~ None product ~~</p>
+    <% end %>
+  </div>
+  <div class="row m-20 mb-2">
+    <div>Kaminari Demo</div>
+  </div>
+</div>
