@@ -9,10 +9,10 @@
 #   end
 require 'faker'
 
-20.times do 
-  price = rand(5..100)*10
+20.times do
+  price = rand(5..100) * 10
   Product.create!(
     name: Faker::Food.fruits,
-    price: price
+    price:
   )
 end
