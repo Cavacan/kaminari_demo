@@ -8,13 +8,13 @@
     <% if logged_in? %>
       <% '--- ログイン済み ---' %>
       <h3>ユーザー名 ： <%= current_user.name %></h3>
-      <p><%= link_to 'ログアウト', logout_path, method: :delete, data: { confirm: '本当にログアウトしますか？' }  %></p>
+      <p><%= link_to t('.logout'), logout_path, method: :delete, data: { confirm: '本当にログアウトしますか？' }  %></p>
     <% else %>
       <div class="col-2 my-2">
-        <%= link_to "ログイン", login_path %>
+        <%= link_to t('.login'), login_path %>
       </div>
       <div class="col-2 my-2">
-        <%= link_to "ユーザー登録", new_user_path %>
+        <%= link_to t('.new'), new_user_path %>
       </div>
     <% end %>
   </div>
@@ -35,8 +35,8 @@
           <thead>
             <tr>
               <th>ID</th>
-              <th>Name</th>
-              <th>Price</th>
+              <th><%= t('.name') %></th>
+              <th><%= t('.price') %></th>
             </tr>
           </thead>
           <tbody>

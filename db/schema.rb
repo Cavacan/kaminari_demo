@@ -10,28 +10,30 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 20_240_806_021_513) do
-  create_table 'products', force: :cascade do |t|
-    t.string 'name'
-    t.integer 'price'
-    t.datetime 'created_at', null: false
-    t.datetime 'updated_at', null: false
+ActiveRecord::Schema[7.1].define(version: 2024_08_06_085202) do
+  create_table "products", force: :cascade do |t|
+    t.string "name"
+    t.integer "price"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
-  create_table 'test_data', force: :cascade do |t|
-    t.string 'name'
-    t.string 'food'
-    t.datetime 'created_at', null: false
-    t.datetime 'updated_at', null: false
+  create_table "test_data", force: :cascade do |t|
+    t.string "name"
+    t.string "food"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
-  create_table 'users', force: :cascade do |t|
-    t.string 'email', null: false
-    t.string 'crypted_password'
-    t.string 'salt'
-    t.datetime 'created_at', null: false
-    t.datetime 'updated_at', null: false
-    t.string 'name'
-    t.index ['email'], name: 'index_users_on_email', unique: true
+  create_table "users", force: :cascade do |t|
+    t.string "email", null: false
+    t.string "crypted_password"
+    t.string "salt"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "name"
+    t.string "avatar"
+    t.index ["email"], name: "index_users_on_email", unique: true
   end
+
 end

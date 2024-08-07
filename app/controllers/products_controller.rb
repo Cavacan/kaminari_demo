@@ -8,7 +8,7 @@ class ProductsController < ApplicationController
   def create
     @product = Product.new(product_params)
     if @produt.save
-      redirect_to product_path, notice: 'Product was successfully created.'
+      redirect_to product_path, notice: t('defaults.product.created')
     else
       render :new, notice: 'Product create failed.'
     end
