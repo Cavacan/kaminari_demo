@@ -26,7 +26,9 @@
     </div>
   <% end %>
   <div class="row m-20 mb-2">
-    <%= render 'search', q:@q, url: products_path %>
+    <div class="col-6">
+      <%= render 'search', q:@q, url: products_path %>
+    </div>
   </div>
   <div class="row m-20 mb-2">
     <% if @products.present? %>
