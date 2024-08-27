@@ -1,4 +1,5 @@
 class ProductsController < ApplicationController
+  skip_before_action :require_login, only: %i[index create]
   def index
     @q = Product.ransack(params[:q])
     @products = @q.result(distinct: true).page(params[:page])
