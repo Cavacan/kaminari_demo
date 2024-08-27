@@ -1,6 +1,6 @@
-<div class="row">
+<div class="p-3 border border-primary">
   <%= search_form_for q, url: url do |f| %>
-    <div class="col-6">
+    <div class="col">
         <div class="row">
           <div class="col">
           <%= f.label :name_cont, '商品名' %>
@@ -8,7 +8,7 @@
         </div>
       </div>
     </div>
-    <div class="col-6">
+    <div class="col">
       <div class="row">
         <div class="col">
           <%= f.label :price_cont, '価格'%>
@@ -25,7 +25,7 @@
       </div>
     </div>
 
-    <div class="col-2 mt-12">
+    <div class="col mt-12">
       <%= f.submit '検索', class: 'btn btn-primary' %>
     </div>
   <% end %>
