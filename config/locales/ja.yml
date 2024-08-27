@@ -1,0 +1,41 @@
+ja:
+  products:
+    index:
+      new: ユーザー登録
+      update: ユーザー情報更新
+      login: ログイン
+      logout: ログアウト
+      product: 商品
+      new_product: 商品登録
+      product_list: 商品一覧
+      name: 商品名
+      price: 価格
+      created: Product was successfully created.
+  user_sessions:
+    new:
+      login: ログイン
+      email: メールアドレス
+      password: パスワード
+      password_confirmation: パスワード確認
+      top: トップ画面へ戻る
+  users:
+    new:
+      registration: ユーザー登録
+      name: ユーザー名
+      email: メールアドレス
+      password: パスワード
+      password_confirmation: パスワード確認
+      avatar: ユーザー画像
+      regist: 登録
+      to_login: ログインページへ
+    edit:
+      edit: ユーザー更新
+      name: ユーザー名
+      email: メールアドレス
+      password: パスワード
+      password_confirmation: パスワード確認
+      avatar: ユーザー画像
+      update: 更新
+      to_top: TOPページへ
+
+

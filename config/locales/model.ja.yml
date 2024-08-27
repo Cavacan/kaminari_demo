@@ -1,0 +1,11 @@
+ja:
+  activerecord:
+    models:
+      products:
+        product: 商品
+        name: 商品名
+        price: 価格
+      users:
+        email: メールアドレス
+        name: 名前
+        password: パスワード

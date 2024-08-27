@@ -1,0 +1,5 @@
+<div class= "form-group">
+  <%=f.label :avatar %> 
+  <%= f.file_field :avatar, class: form-control %>
+  <%= image_tag user.avatar_url, class="rounded-circle mt-3", id: 'preview', size: '100x100' %>
+</div>

@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row">
     <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2">
-      <h1><%= t('.registration') %></h1>
+      <h1><%= t('.edit') %></h1>
       <%= form_with model: @user, local: true do |f| %>
         <div class="form-group">
           <%= f.label t('.name') %>
@@ -24,10 +24,10 @@
           <%= f.file_field :avatar,class: 'form-control' %>
         </div>
         <br>
-        <%= f.submit t('.regist'), class: 'btn btn-primary' %>
+        <%= f.submit t('.update'), class: 'btn btn-primary' %>
       <% end %>
       <div class='text-center'>
-        <%= link_to t('.to_login'), login_path %>
+        <%= link_to t('.to_top'), products_path %>
       </div>
     </div>
   </div>
